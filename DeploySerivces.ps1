@@ -89,11 +89,3 @@ $config = New-AzApplicationGatewayWebApplicationFirewallConfiguration -Enabled $
 $appgwName = "apim-app-gw"
 # Create the AppGw
 $appgw = New-AzApplicationGateway -Name $appgwName -ResourceGroupName $resGroupName -Location $location -BackendAddressPools $apimProxyBackendPool -BackendHttpSettingsCollection $apimPoolSetting, $apimPoolPortalSetting  -FrontendIpConfigurations $fipconfig01 -GatewayIpConfigurations $gipconfig -FrontendPorts $fp01 -HttpListeners $listener, $portalListener -RequestRoutingRules $rule01, $rule02 -Sku $sku -WebApplicationFirewallConfig $config -SslCertificates $cert, $certPortal -AuthenticationCertificates $authcert -Probes $apimprobe, $apimPortalProbe
-
-## Deploy a private DNS Zone
-Install-Module -Name Az.PrivateDns -force
-
-$zone = New-AzPrivateDnsZone -Name private.$domain -ResourceGroupName $resGroupName
-$link = New-AzPrivateDnsVirtualNetworkLink -ZoneName private.$domain `
-  -ResourceGroupName $resGroupName -Name "mylink" `
-  -VirtualNetworkId $vnet.id -EnableRegistration
