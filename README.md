@@ -18,8 +18,8 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 
 #### What will the script do?
 
-- The script will create a root CA
-- It will create the api and gateway certificate signed by the root CA
+- The script will create a self-signed root CA
+- It will also create the api and gateway certificate signed by the root CA
 
 ### Deploy API Management and Application Gateway
 
