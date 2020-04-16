@@ -9,7 +9,7 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 
 ## What is included in this repo
 
-### (optional) Create the self-signed certifcates
+### Create the self-signed certifcates (Optional)
 > Note: PowerShell - CreateSelfSignedCertificates.ps1
 
 - Certifices are used to set the portal and gateway hostnames in API management
