@@ -25,6 +25,7 @@ Azure Application Gateway provides centralized protection of your web applicatio
 - Certificates are required to encrypt the data between Application Gateway and API Management
 - Certificates are required to set the custom gateway and portal hostnames in API Management
 
+
 ## Steps to deploy this scenario
 
 ### 1. Create the self-signed certifcates (Optional)
