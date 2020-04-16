@@ -11,7 +11,7 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 
 ### Powershell - DeployServices.ps1
 
-### PowerShell - CreateCertificates.ps1
+### PowerShell - CreateSelfSignedCertificates.ps1
 
 ### Powershell - DeployPrivaZone.ps1
 
