@@ -12,6 +12,9 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 ### (optional) Create the self-signed certifcates
 > Note: PowerShell - CreateSelfSignedCertificates.ps1
 
+- Certifices are used to set the portal and gateway names in API management
+- They are also used to create the listeners in Application Gateway
+
 ### Deploy API Management and Application Gateway
 > Note: Powershell - DeployServices.ps1
 
