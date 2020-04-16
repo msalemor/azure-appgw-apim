@@ -16,6 +16,11 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 - They are also used to configure communication between Application Gateway and API Management
 - API Management support self-signed certificates
 
+#### What will the script do?
+
+- The script will create a root CA
+- It will create the api and gateway certificate signed by the root CA
+
 ### Deploy API Management and Application Gateway
 
 > Note: Powershell - DeployServices.ps1
