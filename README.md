@@ -12,8 +12,9 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 ### (optional) Create the self-signed certifcates
 > Note: PowerShell - CreateSelfSignedCertificates.ps1
 
-- Certifices are used to set the portal and gateway names in API management
-- They are also used to create the listeners in Application Gateway
+- Certifices are used to set the portal and gateway hostnames in API management
+- They are also used to configure communication between Application Gateway and API Management
+- API Management support self-signed certificates
 
 ### Deploy API Management and Application Gateway
 
@@ -24,8 +25,17 @@ Remeber to change the parameters before executing this script
 ```powershell
 ```
 
+#### Steps
+#### Create the Vnet and subnet
+#### Create the API Management in the APIM subnet
+#### Create a public IP
+#### Create the Application Gateway
+
 ### (Optional) Deploy an Azure Private DNS Zone
 
 > Note: Powershell - DeployPrivaZone.ps1
+
+- It is best practice to references private service by a DNS name in API Management. 
+- You may also deploy your own DNS service.
 
 
