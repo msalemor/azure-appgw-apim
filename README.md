@@ -12,7 +12,7 @@ The application gateway pattern is one of the key components in modern microserv
 
 Azure Application Gateway provides centralized protection of your web applications from common exploits and vulnerabilities.
 
-## Diagram
+## Scenario Diagram
 
 <img src="AppGwApimDiagram.png" alt="Application Gateway and API Management" style="width:80%">
 
