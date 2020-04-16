@@ -69,6 +69,11 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 #### Create the API Management in the APIM subnet
 #### Create a public IP
 #### Create the Application Gateway
+
+##### Diagram
+
+<img src="AppGwConfiguration.png" alt="Application Gateway and API Management" style="width:80%">
+
 #### CNAME Configuration
 
 - Get the public IP's fully qualified domain
