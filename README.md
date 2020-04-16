@@ -1,8 +1,5 @@
 # Azure Application Gateway and API Management
 
-## Reference Document
-https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway
-
 ## Main scenario
 
 To inspect incoming traffic into API Manage portal and gateway using Application Gateway's WAF capabilities. Under this scenario API management in deployed in internal mode. As such API Management is able to connect to internal services that receive an internal IP and never get exposed to the public internet. Development of these services can leverage App Service Environment, VMs, and Kubernetes.
@@ -61,4 +58,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 - It is best practice to references private service by a DNS name in API Management. 
 - You may also deploy your own DNS service.
 
+## Reference Documents
+
+- https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway
 
