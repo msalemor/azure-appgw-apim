@@ -99,6 +99,9 @@ Get-AzPublicIpAddress -ResourceGroupName $resGroupName -Name "publicIP01"
 ## api.yourdomain.com -> FQDN
 ## portal.yourdomain.com -> FQDN
 
+## Self-signed cerficates
+## If you are using self-signed certificates, you may need to the Root signing certificate in Root Certificates for API Management
+
 ## DNS
 
 ## You may want to deploy a private zone where you add the private services
