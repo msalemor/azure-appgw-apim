@@ -43,6 +43,9 @@ $apimService.PortalCustomHostnameConfiguration = $portalHostnameConfig
 
 Set-AzApiManagement -InputObject $apimService
 
+## Create a public IP
+$publicip = New-AzPublicIpAddress -ResourceGroupName $resGroupName -name "publicIP01" -location $location -AllocationMethod Dynamic
+
 ## Aplication Gateway
 
 $gipconfig = New-AzApplicationGatewayIPConfiguration -Name "gatewayIP01" -Subnet $appgatewaysubnetdata
