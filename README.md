@@ -9,10 +9,14 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 
 ## What is included in this repo
 
-### Powershell - DeployServices.ps1
+### (optional) Create the self-signed certifcates
+> Note: PowerShell - CreateSelfSignedCertificates.ps1
 
-### PowerShell - CreateSelfSignedCertificates.ps1
+### Deploy API Management and Application Gateway
+> Note: Powershell - DeployServices.ps1
 
-### Powershell - DeployPrivaZone.ps1
+### (Optional) Deploy an Azure Private DNS Zone
+
+> Note: Powershell - DeployPrivaZone.ps1
 
 
