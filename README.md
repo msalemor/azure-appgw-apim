@@ -73,7 +73,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 
 ##### Application Gateway Configuration Diagram
 
-<img src="AppGwConfigurationv1.png" alt="Application Gateway and API Management" style="width:80%">
+<img src="AppGwConfigurationv2.png" alt="Application Gateway and API Management" style="width:80%">
 
 #### CNAME Configuration
 
