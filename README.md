@@ -47,13 +47,17 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 
 #### Steps
 #### Create the Vnet and subnet
-
 - AppGw deployed to subnet
 - API Management deployed to subnet
-
 #### Create the API Management in the APIM subnet
 #### Create a public IP
 #### Create the Application Gateway
+#### CNAME Configuration
+
+- Get the public IP's fully qualified domain
+- Configure your external DNS and add the CNAME
+
+<img src="DNSSettings.png" alt="Application Gateway and API Management" style="width:80%">
 
 ### Deploy an Azure Private DNS Zone (Optional)
 
@@ -62,7 +66,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 - It is best practice to references private service by a DNS name in API Management. 
 - You may also deploy your own DNS service.
 
-<img src="DNSSettings.png" alt="Application Gateway and API Management" style="width:80%">
+
 
 ## Reference Documents
 
