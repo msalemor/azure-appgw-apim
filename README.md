@@ -8,9 +8,9 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 
 <img src="AppGwApimDiagram.png" alt="Application Gateway and API Management" style="width:80%">
 
-## Scripts included in this repo
+## Steps to deploy this scenario
 
-### Create the self-signed certifcates (Optional)
+### 1. Create the self-signed certifcates (Optional)
 > Note: PowerShell - CreateSelfSignedCertificates.ps1
 
 - Certifices are used to set the portal and gateway hostnames in API management
@@ -22,7 +22,7 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 - The script will create a self-signed root CA
 - It will also create the api and gateway certificate signed by the root CA
 
-### Deploy API Management and Application Gateway
+### 2. Deploy API Management and Application Gateway
 
 > Note: Powershell - DeployServices.ps1
 
@@ -58,7 +58,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 - Configure your external DNS and add the CNAME
 <img src="DNSSettings.png" alt="Application Gateway and API Management" style="width:80%">
 
-### Deploy an Azure Private DNS Zone (Optional)
+### 3. Deploy an Azure Private DNS Zone (Optional)
 
 > Note: Powershell - DeployPrivaZone.ps1
 
