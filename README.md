@@ -66,8 +66,6 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 - It is best practice to references private service by a DNS name in API Management. 
 - You may also deploy your own DNS service.
 
-
-
 ## Reference Documents
 
 - https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway
