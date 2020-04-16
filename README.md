@@ -28,6 +28,20 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 Remeber to change the parameters before executing this script
 
 ```powershell
+# Create resource group
+$resGroupName = "apim-appGw-RG" # resource group name
+$location = "East US"           # Azure region
+New-AzResourceGroup -Name $resGroupName -Location $location
+
+# Set the new domains
+$domain = "yourdomain.com"
+$gatewayHostname = "api.$domain"                 # API gateway host
+$portalHostname = "portal.$domain"               # API developer portal host
+$gatewayCertCerPath = "D:\certs\ecademo1.com\api.ecademo1.com.cer" # full path to api.contoso.net .cer file
+$gatewayCertPfxPath = "D:\certs\ecademo1.com\api.ecademo1.com.pfx" # full path to api.contoso.net .pfx file
+$portalCertPfxPath = "D:\certs\ecademo1.com\portal.ecademo1.com.pfx"   # full path to portal.contoso.net .pfx file
+$gatewayCertPfxPassword = "P@tojit0"   # password for api.contoso.net pfx certificate
+$portalCertPfxPassword = "P@tojit0"    # password for portal.contoso.net pfx certificate
 ```
 
 #### Steps
