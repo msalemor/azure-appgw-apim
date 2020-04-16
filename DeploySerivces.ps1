@@ -3,7 +3,6 @@ Connect-AzAccount
 # Create resource group
 $resGroupName = "apim-appGw-RG" # resource group name
 $location = "East US"           # Azure region
-New-AzResourceGroup -Name $resGroupName -Location $location
 
 # Set the new domains
 $domain = "yourdomain.com"
@@ -14,6 +13,9 @@ $gatewayCertPfxPath = "D:\certs\ecademo1.com\api.ecademo1.com.pfx" # full path t
 $portalCertPfxPath = "D:\certs\ecademo1.com\portal.ecademo1.com.pfx"   # full path to portal.contoso.net .pfx file
 $gatewayCertPfxPassword = "P@tojit0"   # password for api.contoso.net pfx certificate
 $portalCertPfxPassword = "P@tojit0"    # password for portal.contoso.net pfx certificate
+
+# Create the resouce group
+New-AzResourceGroup -Name $resGroupName -Location $location
 
 # Create VNet
 $appgatewaysubnet = New-AzVirtualNetworkSubnetConfig -Name "apim01" -AddressPrefix "10.0.0.0/24"
