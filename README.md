@@ -16,7 +16,13 @@ To inspect incoming traffic into API Manage portal and gateway using Application
 - They are also used to create the listeners in Application Gateway
 
 ### Deploy API Management and Application Gateway
+
 > Note: Powershell - DeployServices.ps1
+
+Remeber to change the parameters before executing this script
+
+```powershell
+```
 
 ### (Optional) Deploy an Azure Private DNS Zone
 
