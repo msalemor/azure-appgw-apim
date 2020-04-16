@@ -54,7 +54,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 #### Create a public IP
 #### Create the Application Gateway
 
-### (Optional) Deploy an Azure Private DNS Zone
+### Deploy an Azure Private DNS Zone (Optional)
 
 > Note: Powershell - DeployPrivaZone.ps1
 
