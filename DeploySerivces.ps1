@@ -90,6 +90,15 @@ $appgwName = "apim-app-gw"
 # Create the AppGw
 $appgw = New-AzApplicationGateway -Name $appgwName -ResourceGroupName $resGroupName -Location $location -BackendAddressPools $apimProxyBackendPool -BackendHttpSettingsCollection $apimPoolSetting, $apimPoolPortalSetting  -FrontendIpConfigurations $fipconfig01 -GatewayIpConfigurations $gipconfig -FrontendPorts $fp01 -HttpListeners $listener, $portalListener -RequestRoutingRules $rule01, $rule02 -Sku $sku -WebApplicationFirewallConfig $config -SslCertificates $cert, $certPortal -AuthenticationCertificates $authcert -Probes $apimprobe, $apimPortalProbe
 
+## CNAME configuration
+
+# Get the FQDN to the IP under DnsSettings
+Get-AzPublicIpAddress -ResourceGroupName $resGroupName -Name "publicIP01"
+
+## Set the CNAME in your DNS to:
+## api.yourdomain.com -> FQDN
+## portal.yourdomain.com -> FQDN
+
 ## DNS
 
 ## You may want to deploy a private zone where you add the private services
