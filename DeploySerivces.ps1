@@ -10,20 +10,21 @@ $appgatewaysubnet = New-AzVirtualNetworkSubnetConfig -Name "apim01" -AddressPref
 $apimsubnet = New-AzVirtualNetworkSubnetConfig -Name "apim02" -AddressPrefix "10.0.1.0/24"
 $vnet = New-AzVirtualNetwork -Name "appgwvnet" -ResourceGroupName $resGroupName -Location $location -AddressPrefix "10.0.0.0/16" -Subnet $appgatewaysubnet,$apimsubnet
 
-# Get subnets
+# Get subnets from the Vnet
 $appgatewaysubnetdata = $vnet.Subnets[0]
 $apimsubnetdata = $vnet.Subnets[1]
 
-# Create APIM
+# Set the API Management subnet and other creation settings
 $apimVirtualNetwork = New-AzApiManagementVirtualNetwork -SubnetResourceId $apimsubnetdata.Id
+$apimServiceName = "YourApiName"       # API Management service instance name
+$apimOrganization = "Your Company Name"         # organization name
+$apimAdminEmail = "admin@yourdoamin.com" # administrator's email address
 
-$apimServiceName = "EcaDemo1"       # API Management service instance name
-$apimOrganization = "EcaDemo1"         # organization name
-$apimAdminEmail = "admin@ecademo1.com" # administrator's email address
+# Create API Management in internal mode
 $apimService = New-AzApiManagement -ResourceGroupName $resGroupName -Location $location -Name $apimServiceName -Organization $apimOrganization -AdminEmail $apimAdminEmail -VirtualNetwork $apimVirtualNetwork -VpnType "Internal" -Sku "Developer"
 
 # Set the new domains
-$domain = "ecademo1.com"
+$domain = "yourdomain.com"
 $gatewayHostname = "api.$domain"                 # API gateway host
 $portalHostname = "portal.$domain"               # API developer portal host
 $gatewayCertCerPath = "D:\certs\ecademo1.com\api.ecademo1.com.cer" # full path to api.contoso.net .cer file
