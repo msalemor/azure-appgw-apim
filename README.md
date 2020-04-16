@@ -8,7 +8,7 @@ To inspect incoming traffic into API Management portal and gateway using Applica
 
 The application gateway pattern is one of the key components in modern microservices architecture. Under this pattern, there's a common entry point into the services that may be exposes as part of microservices architecture. The benefits of this pattern include among other things service discovery, caching, reshaping of the request/response pipelines, consolidated security, monetization, etc. Azure's API Management offers these capabilities and much more.
 
-## Why Ause Azure pplication Gateway?
+## Why use Azure pplication Gateway?
 
 ## Diagram
 
