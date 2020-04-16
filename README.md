@@ -56,7 +56,6 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 
 - Get the public IP's fully qualified domain
 - Configure your external DNS and add the CNAME
-
 <img src="DNSSettings.png" alt="Application Gateway and API Management" style="width:80%">
 
 ### Deploy an Azure Private DNS Zone (Optional)
@@ -69,4 +68,3 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 ## Reference Documents
 
 - https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway
-
