@@ -16,6 +16,14 @@ Azure Application Gateway provides centralized protection of your web applicatio
 
 <img src="AppGwApimDiagram.png" alt="Application Gateway and API Management" style="width:80%">
 
+## Infrastructure aspects
+
+- Services deployed inside subnets a Vnet
+- Each services requires its own subnet
+- DNS is highly recommended in order for API Magement to resolve internal service names
+- Certificates encrypt the data between Application Gateway and API Management
+- Certificates are used to set the custom gateway and portal hostnames in API Management
+
 ## Steps to deploy this scenario
 
 ### 1. Create the self-signed certifcates (Optional)
