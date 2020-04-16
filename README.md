@@ -2,7 +2,7 @@
 
 ## Main scenario
 
-To inspect incoming traffic into API Manage portal and gateway using Application Gateway's WAF capabilities. Under this scenario API management in deployed in internal mode. In this mode, API Management is able to connect to internal services that receive an internal IP and never get exposed to the public internet. Development of these services can leverage App Service Environment, VMs, and Kubernetes, for example.
+To inspect incoming traffic into API Manage portal and gateway using Application Gateway's WAF capabilities. Under this scenario API management in deployed in internal mode. In this mode, API Management is able to connect to internal services that receive an internal IP and never get exposed to the public internet. Development of these services can leverage App Service Environment, VMs, and Kubernetes, for example. All layer 7 traffic arriving at the application gateway will be inpected and prevented ffrom common attacks.
 
 ## Diagram
 
