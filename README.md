@@ -70,7 +70,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 #### Create a public IP
 #### Create the Application Gateway
 
-##### Diagram
+##### Application Gateway Configuration Diagram
 
 <img src="AppGwConfiguration.png" alt="Application Gateway and API Management" style="width:80%">
 
