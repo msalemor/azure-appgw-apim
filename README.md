@@ -29,7 +29,7 @@ Azure Application Gateway provides centralized protection of your web applicatio
 ## Steps to deploy this scenario
 
 ### 1. Create the self-signed certifcates (Optional)
-> Note: PowerShell - CreateSelfSignedCertificates.ps1
+> File: **CreateSelfSignedCertificates.ps1**
 
 - Certifices are used to set the portal and gateway hostnames in API management
 - They are also used to configure communication between Application Gateway and API Management
@@ -42,7 +42,7 @@ Azure Application Gateway provides centralized protection of your web applicatio
 
 ### 2. Deploy API Management and Application Gateway
 
-> Note: Powershell - DeployServices.ps1
+> File: **DeployServices.ps1**
 
 Remeber to change the parameters before executing this script
 
