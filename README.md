@@ -40,8 +40,8 @@ $portalHostname = "portal.$domain"               # API developer portal host
 $gatewayCertCerPath = "D:\certs\ecademo1.com\api.ecademo1.com.cer" # full path to api.contoso.net .cer file
 $gatewayCertPfxPath = "D:\certs\ecademo1.com\api.ecademo1.com.pfx" # full path to api.contoso.net .pfx file
 $portalCertPfxPath = "D:\certs\ecademo1.com\portal.ecademo1.com.pfx"   # full path to portal.contoso.net .pfx file
-$gatewayCertPfxPassword = "P@tojit0"   # password for api.contoso.net pfx certificate
-$portalCertPfxPassword = "P@tojit0"    # password for portal.contoso.net pfx certificate
+$gatewayCertPfxPassword = "YourSecurePassowrd"   # password for api.contoso.net pfx certificate
+$portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.net pfx certificate
 ```
 
 #### Steps
