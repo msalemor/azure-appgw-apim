@@ -46,6 +46,10 @@ $portalCertPfxPassword = "P@tojit0"    # password for portal.contoso.net pfx cer
 
 #### Steps
 #### Create the Vnet and subnet
+
+- AppGw deployed to subnet
+- API Management deployed to subnet
+
 #### Create the API Management in the APIM subnet
 #### Create a public IP
 #### Create the Application Gateway
