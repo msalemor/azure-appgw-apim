@@ -28,7 +28,16 @@ Azure Application Gateway provides centralized protection of your web applicatio
 
 ## Steps to deploy this scenario
 
-### 1. Create the self-signed certifcates (Optional)
+### Clone the repo
+
+### Create the self-signed certifcates (Optional)
+
+- Edit the CreateSelfSignedCertificates.ps1 and update your domain and path where to drop the certificates:
+- Open an administrator Powershell window and run
+```powershell
+./CreateSelfSignedCertificates.ps1
+```
+
 > File: **CreateSelfSignedCertificates.ps1**
 
 - Certifices are used to set the portal and gateway hostnames in API management
