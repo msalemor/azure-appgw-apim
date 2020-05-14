@@ -11,8 +11,8 @@ $portalHostname = "portal.$domain"               # API developer portal host
 $gatewayCertCerPath = "C:\certs\$domain\api.$domain.cer" # full path to api.contoso.net .cer file
 $gatewayCertPfxPath = "C:\certs\$domain\api.$domain.pfx" # full path to api.contoso.net .pfx file
 $portalCertPfxPath = "C:\certs\$domain\portal.$domain.pfx"   # full path to portal.contoso.net .pfx file
-$gatewayCertPfxPassword = "YourVerySecurePassword"   # password for api.contoso.net pfx certificate
-$portalCertPfxPassword = "YourVerySecurePassword"    # password for portal.contoso.net pfx certificate
+$gatewayCertPfxPassword = "YourVerySecureP@ssword"   # password for api.contoso.net pfx certificate
+$portalCertPfxPassword = "YourVerySecureP@ssword"    # password for portal.contoso.net pfx certificate
 
 # Create the resouce group
 New-AzResourceGroup -Name $resGroupName -Location $location
