@@ -38,7 +38,7 @@ Azure Application Gateway provides centralized protection of your web applicatio
 ./CreateSelfSignedCertificates.ps1
 ```
 
-> File: **CreateSelfSignedCertificates.ps1**
+> **File:** ```CreateSelfSignedCertificates.ps1```
 
 - Certifices are used to set the portal and gateway hostnames in API management
 - They are also used to configure communication between Application Gateway and API Management
@@ -51,7 +51,7 @@ Azure Application Gateway provides centralized protection of your web applicatio
 
 ### Deploy API Management and Application Gateway
 
-> File: **DeployServices.ps1**
+> **File:** ```DeployServices.ps1```
 
 Remeber to change the parameters before executing this script
 
@@ -81,6 +81,8 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 - Create the Application Gateway with the assigned public IP
   - Creates the listeners, probles, rules and backend pools to establish secure communitcation between AppGw and APIM using end-to-end encryption.
   - The diagram below shows this configuration
+  
+> **Note:** The script includes detail comments about each of these steps.
 
 ##### Application Gateway Configuration Diagram
 
@@ -95,7 +97,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 
 ### Deploy a DNS Private Zone 
 
-> Note: Powershell - DeployPrivaZone.ps1
+> **Note:** Powershell - DeployPrivaZone.ps1
 
 - It is best practice to references private services by a DNS name in API Management. 
 - You may also deploy your own DNS service inside the VNet to another subnet.
