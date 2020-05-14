@@ -1,11 +1,11 @@
-# Settings
+# Certificate configuration
 $domain = "yourdomain.com"
 $gatewayDomain = "api.$domain"
 $portalDomain = "portal.$domain"
 $certPath = "c:\certs"
 $certPwd="YourVerySecureP@ssword"
 
-# Create signing certiface
+# Create the ROOT certiface
 $params = @{
   DnsName = $domain
   KeyLength = 2048
@@ -17,10 +17,12 @@ $params = @{
   KeyUsage = 'CertSign','CRLSign' #fixes invalid cert error
 }
 $rootCA = New-SelfSignedCertificate @params
+# Export the ROOT certificate
 Export-Certificate -Cert $rootCA -FilePath "$certPath\rootCA.cer"
+# Import the ROOT certificate into the trusted store
 Import-Certificate -CertStoreLocation 'Cert:\LocalMachine\Root' -FilePath "$certPath\rootCA.cer"
 
-# create the gateway certificate signed by the root CA
+# Create the gateway certificate signed by the root CA
 $params = @{
   DnsName = $gatewayDomain
   Signer = $rootCA
@@ -32,11 +34,12 @@ $params = @{
   CertStoreLocation = 'Cert:\LocalMachine\My'
 }
 $gatewayCert = New-SelfSignedCertificate @params
-# Export the gateway certificate
+# Export the gateway CER certificate
 Export-Certificate -Cert $gatewayCert -FilePath "$certPath\$gatewayDomain.cer"
+# Export the gateway PFX certificate
 Export-PfxCertificate -Cert $gatewayCert -FilePath "$certPath\$gatewayDomain.pfx" -Password (ConvertTo-SecureString -AsPlainText $certPwd -Force)
 
-# create the portal certificate signed by the root CA
+# Create the portal certificate signed by the root CA
 $params = @{
   DnsName = $portalDomain
   Signer = $rootCA
@@ -48,7 +51,8 @@ $params = @{
   CertStoreLocation = 'Cert:\LocalMachine\My'
 }
 $portalCert = New-SelfSignedCertificate @params
-# Export the portal certificate
+# Export the portal CER certificate
 Export-Certificate -Cert $portalCert -FilePath "$certPath\$portalDomain.cer"
+# Export the portal PFX certificate
 Export-PfxCertificate -Cert $portalCert -FilePath "$certPath\$portalDomain.pfx" -Password (ConvertTo-SecureString -AsPlainText $certPwd -Force)
 
