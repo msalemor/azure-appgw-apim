@@ -44,7 +44,7 @@ Azure Application Gateway provides centralized protection of your web applicatio
 - They are also used to configure communication between Application Gateway and API Management
 - API Management support self-signed certificates
 
-#### What will the script do?
+#### What does the script do?
 
 - The script will create a self-signed root CA
 - It will also create the api and gateway certificate signed by the root CA
@@ -85,19 +85,19 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 
 <img src="AppGwConfigurationv2.png" alt="Application Gateway and API Management" style="width:80%">
 
-#### CNAME Configuration
+### CNAME Configuration
 
 - Get the public IP's fully qualified domain
 - Configure your external DNS and add the CNAME
 
 <img src="DNSSettings.png" alt="Application Gateway and API Management" style="width:80%">
 
-### 3. Deploy an Azure Private DNS Zone (Optional)
+### Deploy a DNS Private Zone 
 
 > Note: Powershell - DeployPrivaZone.ps1
 
-- It is best practice to references private service by a DNS name in API Management. 
-- You may also deploy your own DNS service.
+- It is best practice to references private services by a DNS name in API Management. 
+- You may also deploy your own DNS service inside the VNet to another subnet.
 
 ## Reference Documents
 
