@@ -72,14 +72,12 @@ $gatewayCertPfxPassword = "YourSecurePassowrd"   # password for api.contoso.net 
 $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.net pfx certificate
 ```
 
-#### 2.1 Steps
+#### What does the script do?
 
-#### 2.1.1 Create the Vnet and subnet
-- AppGw deployed to subnet
-- API Management deployed to subnet
-#### Create the API Management in the APIM subnet
-#### Create a public IP
-#### Create the Application Gateway
+- Creates Vnet and subnet with the AppGw and APIM subnet
+- Creates the API Management in the APIM subnet
+- Creates a public IP
+- Create the Application Gateway
 
 ##### Application Gateway Configuration Diagram
 
