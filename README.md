@@ -106,7 +106,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 
 ## Testing with an External API
 
-API Management comes configured with a echo API. You will need to get a subscription key to be able to make a call to this API. The administrator account includes a key or you can create a user and get a subscription assigned to a product.
+API Management comes configured with the echo API. You will need to get a subscription key to be able to make a call to this API. The administrator account includes a key or you can create a user and get a subscription assigned to a product.
 
 ### GET Call
 ```bash
