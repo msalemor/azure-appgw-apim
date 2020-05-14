@@ -80,6 +80,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 - Creates a public IP
 - Create the Application Gateway with the assigned public IP
   - Creates the listeners, probles, rules and backend pools to establish secure communitcation between AppGw and APIM using end-to-end encryption.
+  - The diagram below shows this configuration
 
 ##### Application Gateway Configuration Diagram
 
