@@ -65,9 +65,9 @@ New-AzResourceGroup -Name $resGroupName -Location $location
 $domain = "yourdomain.com"
 $gatewayHostname = "api.$domain"                 # API gateway host
 $portalHostname = "portal.$domain"               # API developer portal host
-$gatewayCertCerPath = "D:\certs\ecademo1.com\api.ecademo1.com.cer" # full path to api.contoso.net .cer file
-$gatewayCertPfxPath = "D:\certs\ecademo1.com\api.ecademo1.com.pfx" # full path to api.contoso.net .pfx file
-$portalCertPfxPath = "D:\certs\ecademo1.com\portal.ecademo1.com.pfx"   # full path to portal.contoso.net .pfx file
+$gatewayCertCerPath = "C:\certs\$domainm\api.$domain.cer" # full path to api.contoso.net .cer file
+$gatewayCertPfxPath = "C:\certs\$domain\api.$domain.pfx" # full path to api.contoso.net .pfx file
+$portalCertPfxPath = "C:\certs\$domain\portal.$domain.pfx"   # full path to portal.contoso.net .pfx file
 $gatewayCertPfxPassword = "YourSecurePassowrd"   # password for api.contoso.net pfx certificate
 $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.net pfx certificate
 ```
