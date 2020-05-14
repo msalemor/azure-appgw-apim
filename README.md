@@ -74,10 +74,12 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 
 #### What does the script do?
 
-- Creates Vnet and subnet with the AppGw and APIM subnet
+- Creates Vnet and subnet with the AppGw and APIM subnet in internal mode
 - Creates the API Management in the APIM subnet
+- It renames the gateway and portal names using the supplied certificates
 - Creates a public IP
-- Create the Application Gateway
+- Create the Application Gateway with the assigned public IP
+  - Creates the listeners, probles, rules and backend pools to establish secure communitcation between AppGw and APIM using end-to-end encryption.
 
 ##### Application Gateway Configuration Diagram
 
@@ -87,6 +89,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 
 - Get the public IP's fully qualified domain
 - Configure your external DNS and add the CNAME
+
 <img src="DNSSettings.png" alt="Application Gateway and API Management" style="width:80%">
 
 ### 3. Deploy an Azure Private DNS Zone (Optional)
