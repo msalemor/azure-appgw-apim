@@ -22,7 +22,7 @@ Azure Application Gateway provides centralized protection of your web applicatio
   - Each services requires its own subnet
 - DNS is highly recommended in order for API Magement to resolve internal service names
   - You can deploy an Azure Private Zone or your own via a VMs in on a subnet on the VNet
-- Certificates are required to encrypt the data between Application Gateway and API Management
+- Certificates are required to encrypt the end-to-end communication between Application Gateway and API Management
 - Certificates are required to set the custom gateway and portal hostnames in API Management
 
 
@@ -49,7 +49,7 @@ Azure Application Gateway provides centralized protection of your web applicatio
 - The script will create a self-signed root CA
 - It will also create the api and gateway certificate signed by the root CA
 
-### 2. Deploy API Management and Application Gateway
+### Deploy API Management and Application Gateway
 
 > File: **DeployServices.ps1**
 
