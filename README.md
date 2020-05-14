@@ -102,7 +102,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 - It is best practice to references private services by a DNS name in API Management. 
 - You may also deploy your own DNS service inside the VNet to another subnet.
 
-## Testing
+## Testing with an External API
 
 API Management comes configured with a echo API. You will need to get a subscription key to be able to make a call to this API. The administrator account includes a key or you can create a user and get a subscription assigned to a product.
 
@@ -126,6 +126,24 @@ date: Thu, 14 May 2020 16:52:28 GMT
 host: echoapi.cloudapp.net
 ...
 ```
+
+## Testing with an Internal API
+
+- You will need to deploy an internal API to a subnet on the VNet
+- You will need to configure the API in APIM and assign it to a product
+- Try to use an internal DNS name to hit your API
+
+### GET Call
+
+```bash
+HEADER Ocp-Apim-Subscription-Key: ••••••••••••••••••••••••••••••••
+GET https://api.yourdomain.com/api/yourapi
+```
+
+### Expected Result
+
+- Your expected result
+
 
 ## Reference Documents
 
