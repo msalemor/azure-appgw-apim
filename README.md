@@ -2,7 +2,7 @@
 
 ## Main scenario
 
-To inspect incoming traffic into API Management portal and gateway using Application Gateway's WAF capabilities. Under this scenario API management in deployed in internal mode. In this mode, API Management is able to connect to internal and external services. Internal services obtain private IP addresses inside the Vnet and never get exposed to the public internet. Development of internal services can leverage App Service Environment, VMs, and Kubernetes, for example. All layer 7 traffic arriving at the application gateway will be inpected and prevented from executing common attacks.
+To inspect incoming traffic into API Management portal and gateway using Application Gateway's WAF capabilities. Under this scenario API management in deployed in internal mode. In this mode, API Management is able to connect to internal and external services. Internal services obtain private IP addresses inside the VNet and never get exposed to the public internet. Development of internal services can leverage App Service Environment, VMs, and Kubernetes, for example. All layer 7 traffic arriving at the application gateway will be inpected and prevented from executing common attacks.
 
 ## Why use Azure API Management
 
@@ -18,10 +18,10 @@ Azure Application Gateway provides centralized protection of your web applicatio
 
 ## Infrastructure aspects
 
-- Application Gateway and API Management are deployed inside subnets on a Vnet
+- Application Gateway and API Management are deployed inside subnets on a VMet
   - Each services requires its own subnet
 - DNS is highly recommended in order for API Magement to resolve internal service names
-  - You can deploy an Azure Private Zone or your own
+  - You can deploy an Azure Private Zone or your own via a VMs in on a subnet on the VNet
 - Certificates are required to encrypt the data between Application Gateway and API Management
 - Certificates are required to set the custom gateway and portal hostnames in API Management
 
@@ -73,6 +73,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 ```
 
 #### 2.1 Steps
+
 #### 2.1.1 Create the Vnet and subnet
 - AppGw deployed to subnet
 - API Management deployed to subnet
