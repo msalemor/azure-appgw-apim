@@ -8,11 +8,11 @@ $location = "East US"           # Azure region
 $domain = "yourdomain.com"
 $gatewayHostname = "api.$domain"                 # API gateway host
 $portalHostname = "portal.$domain"               # API developer portal host
-$gatewayCertCerPath = "D:\certs\ecademo1.com\api.ecademo1.com.cer" # full path to api.contoso.net .cer file
-$gatewayCertPfxPath = "D:\certs\ecademo1.com\api.ecademo1.com.pfx" # full path to api.contoso.net .pfx file
-$portalCertPfxPath = "D:\certs\ecademo1.com\portal.ecademo1.com.pfx"   # full path to portal.contoso.net .pfx file
-$gatewayCertPfxPassword = "P@tojit0"   # password for api.contoso.net pfx certificate
-$portalCertPfxPassword = "P@tojit0"    # password for portal.contoso.net pfx certificate
+$gatewayCertCerPath = "C:\certs\$domain\api.$domain.cer" # full path to api.contoso.net .cer file
+$gatewayCertPfxPath = "C:\certs\$domain\api.$domain.pfx" # full path to api.contoso.net .pfx file
+$portalCertPfxPath = "C:\certs\$domain\portal.$domain.pfx"   # full path to portal.contoso.net .pfx file
+$gatewayCertPfxPassword = "YourVerySecurePassword"   # password for api.contoso.net pfx certificate
+$portalCertPfxPassword = "YourVerySecurePassword"    # password for portal.contoso.net pfx certificate
 
 # Create the resouce group
 New-AzResourceGroup -Name $resGroupName -Location $location
@@ -95,6 +95,7 @@ $appgw = New-AzApplicationGateway -Name $appgwName -ResourceGroupName $resGroupN
 ## CNAME configuration
 
 # Get the FQDN to the IP under DnsSettings
+# You can use the FQDN to update your DNS CNAME settings
 Get-AzPublicIpAddress -ResourceGroupName $resGroupName -Name "publicIP01"
 
 ## Set the CNAME in your DNS to:
