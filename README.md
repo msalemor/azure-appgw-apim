@@ -74,7 +74,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
 
 #### What does the script do?
 
-- Creates Vnet and subnet with the AppGw and APIM subnet in internal mode
+- Creates VNet and subnet with the AppGw and APIM subnet in internal mode
 - Creates the API Management in the APIM subnet
 - It renames the gateway and portal names using the supplied certificates
 - Creates a public IP
