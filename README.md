@@ -49,6 +49,8 @@ Azure Application Gateway provides centralized protection of your web applicatio
 - The script will create a self-signed root CA
 - It will also create the api and gateway certificate signed by the root CA
 
+> **Note:** Please note that the script includes detail comments about each of these steps.
+
 ### Deploy API Management and Application Gateway
 
 > **File:** ```DeployServices.ps1```
@@ -82,7 +84,7 @@ $portalCertPfxPassword = "YourSecurePassowrd"    # password for portal.contoso.n
   - Creates the listeners, probles, rules and backend pools to establish secure communitcation between AppGw and APIM using end-to-end encryption.
   - The diagram below shows this configuration
   
-> **Note:** The script includes detail comments about each of these steps.
+> **Note:** Please note that the script includes detail comments about each of these steps.
 
 ##### Application Gateway Configuration Diagram
 
