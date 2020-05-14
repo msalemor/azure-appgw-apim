@@ -4,17 +4,13 @@
 
 To inspect incoming traffic into API Management portal and gateway using Application Gateway's WAF capabilities. Under this scenario API management in deployed in internal mode. In this mode, API Management is able to connect to internal and external services. Internal services obtain private IP addresses inside the VNet and never get exposed to the public internet. Development of internal services can leverage App Service Environment, VMs, and Kubernetes, for example. All layer 7 traffic arriving at the application gateway will be inpected and prevented from executing common attacks.
 
-## Why use Azure API Management
+## Why use Azure API Management?
 
 The application gateway pattern is one of the key components in modern microservices architecture. Under this pattern, there's a common entry point into the services that may be exposed as part of microservices architecture. The benefits of this pattern include among other things service discovery, caching, reshaping of the request/response pipelines, consolidated security, monetization, etc. Azure's API Management offers these capabilities and much more.
 
-## Why us Application Gateway in WAF mode
+## Why us Application Gateway in WAF mode?
 
-Application Gateways servers as a gateway between your external and internal traffic. In WAF mode, application gateway can detect and prevent common attacks.
-
-## Why use Azure Application Gateway?
-
-Azure Application Gateway provides centralized protection of your web applications from common exploits and vulnerabilities.
+Application Gateways servers as a gateway between your external and internal traffic. In WAF mode, Azure Application Gateway provides centralized protection of your web applications from common exploits and vulnerabilities.
 
 ## Scenario Diagram
 
