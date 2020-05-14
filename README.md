@@ -133,7 +133,8 @@ host: echoapi.cloudapp.net
 
 - You will need to deploy an internal API to a subnet on the VNet
 - You will need to configure the API in APIM and assign it to a product
-- Try to use an internal DNS name to hit your API
+  - Try to use an internal DNS name for your API
+  - Alternitvely you can used the private IP number, but you will need to have a re-direct policy to convert the Gateway host name to the interal IP address
 
 ### GET Call
 
